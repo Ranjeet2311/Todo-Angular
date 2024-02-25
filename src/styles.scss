@@ -1,1 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+.heading-bg {
+  background-image: url(./assets/astronomy.jpg);
+}
+
+.form-wrap,
+.todolist-wrap {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 6px;
+  background-color: white;
+  animation: slidein 0.5s forwards;
+}
+
+.todolist-wrap {
+  max-height: 600px;
+  overflow-y: scroll;
+  animation: slidein 0.5s forwards;
+  margin-bottom: 60px;
+  padding-top: 0 !important;
+}
+
+.check-wrap,
+.delete-wrap {
+  font-size: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 100%;
+  // transition: width 2s;
+  // transition-timing-function: linear;
+  animation: slidein 0.5s forwards;
+  box-shadow: 1px 1px 6px rgb(165, 165, 165);
+
+  &:hover {
+    box-shadow: 4px 4px 12px black;
+  }
+}
+
+@keyframes slidein {
+  from {
+    max-height: 0px;
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  to {
+    max-height: 1000px;
+    transform: scale(1);
+    opacity: 1;
+  }
+}

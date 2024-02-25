@@ -1,0 +1,26 @@
+<div class="form-wrap me-auto ms-auto mt-4 mb-4">
+  <form>
+    <div class="mb-3">
+      <label for="exampleInputName" class="form-label">Your Name </label>
+      <input type="text" name="title" class="form-control" id="exampleInputName" aria-describedby="titleHelp"
+        [(ngModel)]='name'>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputTitle" class="form-label">To-do title </label>
+      <input type="text" name="title" class="form-control" id="exampleInputTitle" aria-describedby="titleHelp"
+        [(ngModel)]='title'>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputAuthor" class="form-label">Due date</label>
+      <input type="date" name="author" class="form-control" id="exampleInputAuthor" aria-describedby="authorHelp"
+        [(ngModel)]="date">
+    </div>
+    <div class="mb-4">
+      <label for="exampleInputDesc" class="form-label">Add description</label>
+      <textarea type="text" name="description" class="form-control" id="exampleInputDesc" aria-describedby="titleHelp"
+        [(ngModel)]='description'></textarea>
+    </div>
+    <button (click)="submitTodo($event)" type="submit" class="btn btn-primary w-100 mt-2">Add booking</button>
+  </form>
+
+</div>
